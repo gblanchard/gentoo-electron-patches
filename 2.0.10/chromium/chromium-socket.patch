@@ -1,0 +1,14 @@
+--- a/third_party/webrtc/rtc_base/physicalsocketserver.cc	2020-02-03 17:27:03.725809127 -0500
++++ b/third_party/webrtc/rtc_base/physicalsocketserver.cc	2020-02-03 17:27:58.355809195 -0500
+@@ -32,6 +32,10 @@
+ #include <signal.h>
+ #endif
+ 
++#if define(WEBRTC_LINUX)
++#include <linux/sockios.h>
++#endif
++
+ #if defined(WEBRTC_WIN)
+ #define WIN32_LEAN_AND_MEAN
+ #include <windows.h>
+
