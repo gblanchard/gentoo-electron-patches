@@ -4,9 +4,7 @@
  #include <signal.h>
  #endif
  
-+#if define(WEBRTC_LINUX)
 +#include <linux/sockios.h>
-+#endif
 +
  #if defined(WEBRTC_WIN)
  #define WIN32_LEAN_AND_MEAN
