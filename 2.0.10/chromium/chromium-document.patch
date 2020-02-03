@@ -1,0 +1,12 @@
+--- a/third_party/WebKit/Source/core/dom/Document.cpp	2020-02-03 18:07:27.372478016 -0500
++++ b/third_party/WebKit/Source/core/dom/Document.cpp	2020-02-03 18:08:24.412478066 -0500
+@@ -5189,7 +5189,7 @@
+ 
+   for (unsigned i = 0; i < length;) {
+     UChar32 c;
+-    U16_NEXT(characters, i, length, c)
++    U16_NEXT(characters, i, length, c);
+     if (c == ':') {
+       if (saw_colon)
+         return ParseQualifiedNameResult(kQNMultipleColons);
+
